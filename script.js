@@ -16,7 +16,7 @@ let keySelect = (k) => {
       }
     };
   } else if (k === '-') {
-    if (display.innerText.split('-').length - 1 < 2 && display.innerText.slice(-1) != '-') {
+    if (display.innerText.split('-').length - 1 < 2 && display.innerText.slice(-1) != '-' && display.innerText.slice(-1) != '.') {
       if (display.innerText === '0') {
         display.innerText = k;
       } else if (display.innerText[0] === k) {
