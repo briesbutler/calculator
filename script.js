@@ -1,26 +1,57 @@
 const display = document.querySelector('.display');
+let n1
 
 let keySelect = (k) => {
   timesClicked = 0;
   if (k === '+' || k === '×' || k === '÷') {
-    if (!display.innerText.includes('+') && !display.innerText.includes('×') && !display.innerText.includes('÷') && display.innerText.slice(-1) != '.' && display.innerText.slice(-1) != '-' && display.innerText != '0') {
-      display.innerText = display.innerText + k;
+    if (!display.innerText.includes('+') && !display.innerText.includes('×') && !display.innerText.includes('÷') && display.innerText.slice(-1) != '.' && display.innerText.slice(-1) != '-' && display.innerText != '0' && display.innerText.split('-').length -1 < 2) {
+      if (display.innerText.includes('-')) {
+        if (display.innerText[0] === '-') {
+          n1 = display.innerText;
+          display.innerText += k;
+        }
+      } else {
+        n1 = display.innerText;
+        display.innerText += k;
+      }
     };
   } else if (k === '-') {
-    if (display.innerText === '0') {
-      display.innerText = k;
-    } else if (display.innerText.endsWith('-') || display.innerText.split('-').length - 1 > 1 ) {
-      display.innerText = display.innerText;
-    } else {
-      display.innerText += k;
+    if (display.innerText.split('-').length - 1 < 2 && display.innerText.slice(-1) != '-') {
+      if (display.innerText === '0') {
+        display.innerText = k;
+      } else if (display.innerText[0] === k) {
+        if (display.innerText.includes('+') || display.innerText.includes('×') || display.innerText.includes ('÷')) {
+          if (display.innerText.slice(-1) === '+' || display.innerText.slice(-1) === '×' || display.innerText.slice(-1) === '÷') {
+            display.innerText += k;
+          }
+        } else {
+          n1 = display.innerText;
+          display.innerText += k;
+        }
+      } else if (display.innerText[0] != k) {
+        if (display.innerText.split('-').length - 1 < 1) {
+          if (display.innerText.includes('+') || display.innerText.includes('×') || display.innerText.includes ('÷')) {
+            if (display.innerText.slice(-1) === '+' || display.innerText.slice(-1) === '×' || display.innerText.slice(-1) === '÷') {
+              display.innerText += k;
+            }
+          } else {
+            n1 = display.innerText;
+            display.innerText += k;
+          }
+        }
+      }
     }
   } else if (k === '.') {
-    if (display.innerText === '0') {
-      display.innerText = k;
-    } else if (display.innerText.split('.').length - 1 > 1 || display.innerText.endsWith('.') || (display.innerText.includes('.') && !display.innerText.includes('0-') && !display.innerText.includes('1-') && !display.innerText.includes('2-') && !display.innerText.includes('3-') && !display.innerText.includes('4-') && !display.innerText.includes('5-') && !display.innerText.includes('6-') && !display.innerText.includes('7-') && !display.innerText.includes('8-') && !display.innerText.includes('9-') && !display.innerText.includes('+') && !display.innerText.includes('×') && !display.innerText.includes('÷'))) { 
-      display.innerText = display.innerText;
-    } else {
-      display.innerText += k;
+    if (display.innerText.split('.').length - 1 < 2 && display.innerText.slice(-1) != '.') {
+      if (display.innerText === '0') {
+        display.innerText = k;
+      } else if (n1.includes('.')) {
+        display.innerText += k;
+      } else {
+        if (display.innerText.split('.').length - 1 < 1) {
+          display.innerText += k;
+        }
+      }
     }
   } else if (display.innerText === '0' || display.innerText === '_' || display.innerText === 'undefined') {
     display.innerText = (k);
@@ -31,6 +62,7 @@ let keySelect = (k) => {
 
 let timesClicked = 0;
 let eqSelect = () => {
+  n1 = ''
   timesClicked++;
   if (timesClicked > 1) {
     display.innerText = '0'
