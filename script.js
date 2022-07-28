@@ -47,10 +47,8 @@ let keySelect = (k) => {
         display.innerText = k;
       } else if (n1.includes('.')) {
         display.innerText += k;
-      } else {
-        if (display.innerText.split('.').length - 1 < 1) {
+      } else if (display.innerText.split('.').length - 1 < 1) {
           display.innerText += k;
-        }
       }
     }
   } else if (display.innerText === '0' || display.innerText === '_' || display.innerText === 'undefined') {
