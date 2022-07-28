@@ -4,7 +4,7 @@ This project is a simple calculator build using JavaScript / HTML and CSS. This 
 
 [Live Heroku Deployment] (https://simple-calculator-gab.herokuapp.com/)
 
-![image](https://user-images.githubusercontent.com/108242839/181402442-6f1e757b-89e9-4337-9f75-6b571cff2d77.png)
+![image](https://user-images.githubusercontent.com/108242839/181597957-68965194-d5fd-4af6-b82f-a184c5f9818b.png)
 
 ## Tecnologies Used
 
