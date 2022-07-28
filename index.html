@@ -5,35 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/svg" href="" class="" />
     <title>Calculator</title>
   </head>
   <body>
     <div class="container">
       <div class="calculator">
-        <div class="screen">
-          <p id="answer">0</p>
-        </div>
-        <div class="buttons">
-          <button class="btn" id="btn-7" onclick="">7</button>
-          <button class="btn" id="btn-8" onclick="">8</button>
-          <button class="btn" id="btn-9" onclick="">9</button>
-          <button class="btn" id="btn-/" onclick="">/</button>
-
-          <button class="btn" id="btn-4" onclick="">4</button>
-          <button class="btn" id="btn-5" onclick="">5</button>
-          <button class="btn" id="btn-6" onclick="">6</button>
-          <button class="btn" id="btn-x" onclick="">x</button>
-
-          <button class="btn" id="btn-1" onclick="">1</button>
-          <button class="btn" id="btn-2" onclick="">2</button>
-          <button class="btn" id="btn-3" onclick="">3</button>
-          <button class="btn" id="btn--" onclick="">-</button>
-
-          <button class="btn" id="btn-0" onclick="">0</button>
-          <button class="btn" id="btn-." onclick="">.</button>
-          <button class="btn" id="btn-+" onclick="">+</button>
-          <button class="btn" id="btn-=" onclick="">=</button>
+        <div class="display">0</div>
+        <div class="keys">
+          <button onclick="keySelect(7)" class="number">7</button>
+          <button onclick="keySelect(8)" class="number">8</button>
+          <button onclick="keySelect(9)" class="number">9</button>
+          <button onclick="keySelect('÷')" class="key--operator">÷</button>
+          <button onclick="keySelect(4)" class="number">4</button>
+          <button onclick="keySelect(5)" class="number">5</button>
+          <button onclick="keySelect(6)" class="number">6</button>
+          <button onclick="keySelect('×')" class="key--operator">×</button>
+          <button onclick="keySelect(1)" class="number">1</button>
+          <button onclick="keySelect(2)" class="number">2</button>
+          <button onclick="keySelect(3)" class="number">3</button>
+          <button onclick="keySelect('-')" class="key--operator">-</button>
+          <button onclick="keySelect(0)" class="number">0</button>
+          <button onclick="keySelect('.')" class="decimal">.</button>
+          <button onclick="keySelect('+')" class="key--operator">+</button>
+          <button
+            onclick="eqSelect()"
+            ondblclick="clSelect()"
+            class="key--equal-clear"
+          >
+            =
+          </button>
         </div>
       </div>
     </div>

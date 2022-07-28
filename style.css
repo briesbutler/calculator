@@ -1,75 +1,59 @@
-
-body {
-    font-family: "Century Gothic", "Lucida Grande", "Lucida Console", sans-serif;
-}
-
-hgroup {
-    font-family: "Calibri", "Arial", sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    color: #ffffff
-}
+ 
+ * {
+  font-family: monospace;
+} 
 
 .container {
-  padding: 0px 50px;
-  margin: 60px auto;
-  max-width: 400px;
-  height: 800px;
-  text-align: center;
+  width: 400px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.calculator {
+  width: 100%;
+  height: 412px;
+  background-color: #2d455d;
+  box-shadow: 0 5px 25px #000;
+  border: 2px solid #0E1E2b;
+  position: relative;
+  border-radius: 8px;
 }
 
-  .calculator {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-  .screen {
-    width: 90%;
-    background-color: hsla(120, 40%, 40%, 0.4);
-    padding: 50px 40px;
-    box-shadow: 0 20px 65px  hsla(120, 40%, 20%, 0.4);
-    position: absolute;
-    border-radius: 8px;
-    text-align: right;
-  }
-  .screen:after {
-    content: "";
-    position: absolute;
-    width: 80%;
-    height: 120%;
-    background-color: #ffffff;
-    z-index: -1;
-    top: -10%;
-    left: 10%;
-  }
-  .screen p {
-    color: hsla(120, 40%, 20%, 1);
-    line-height: 2;
-    font-size: 18px;
-  }
-  .screen h3 {
-    color: #ffffff;
-    margin: 20px 0 60px 0;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-  .calculator .buttons {
-    background-color: #ffffff;
-    border: none;
-    padding: 15px 45px;
-    border-radius: 5px;
-    box-shadow: 0px 5px 10px hsla(120, 40%, 20%, 0.4);
-    font-size: 18px;
-    font-weight: 600;
-    color: hsla(120, 40%, 40%, 1);
-    cursor: pointer;
-  }
+.display {
+  top: 15px;
+  margin: auto;
+  margin-bottom: 50px;
+  width: 85%;
+  background-color: #b0d5ce;
+  border-radius: 8px;
+  padding: 0px 10px;
+  position: relative;
+  text-align: right;
+  font-size: 50px;
+  border: 3px solid #6c8e96;
+  color: #2d455d;
+  box-shadow: inset -0px -18px 7px #9bc2bf;
+  overflow: scroll;
+}
 
-  .calculator .buttons .btn {
-    position: absolute;
-    
-  }
+button {
+  margin: 0px 3px 20px 18px;
+  height: 50px;
+  width: 70px;
+  font-size: 40px;
+  background-color: #dbe3ea;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #0e1e2b;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: -0px 1px 7px #000;
+  position: relative;
+}
 
-  .calculator .buttons #btn-7 {
-
-  }
+.calculator .key--equal-clear {
+  background-color: hsl(24, 94%, 70%);
+  color: #dbe3ea;
+}
