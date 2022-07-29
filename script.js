@@ -1,7 +1,7 @@
 const display = document.querySelector('.display');
 let n1
 
-let keySelect = (k) => {
+let funtionality = (k) => {
   timesClicked = 0;
   if (k === '+' || k === '×' || k === '÷') {
     if (!display.innerText.includes('+') && !display.innerText.includes('×') && !display.innerText.includes('÷') && display.innerText.slice(-1) != '.' && display.innerText.slice(-1) != '-' && display.innerText != '0' && display.innerText.split('-').length -1 < 2) {
@@ -80,3 +80,8 @@ let eqSelect = () => {
     }
   }
 }  
+
+let keySelect = (z) => {
+    display.scrollLeft = 1000000*10000000;
+    funtionality(z);
+}

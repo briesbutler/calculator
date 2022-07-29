@@ -20,24 +20,23 @@
 }
 
 .display {
-  direction: rtl;
-  width: 85%;
+  width: 80%;
   height: 70px;
   max-height: 70px;
   top: 15px;
   margin: auto;
   margin-bottom: 41px;
-  padding: 7px 10px 0px 10px;
+  padding: 7px 27px 0px 10px;
   position: relative;
   text-align: right;
   overflow: auto hidden;
   white-space: nowrap;
-  font-size: 50px;
   background-color: #b0d5ce;
   border-radius: 8px;
-  border: 3px solid #6c8e96;
-  color: #2d455d;
   box-shadow: inset -0px -18px 7px #9bc2bf;
+  border: 3px solid #6c8e96;
+  font-size: 50px;
+  color: #2d455d;
 }
 
 button {
