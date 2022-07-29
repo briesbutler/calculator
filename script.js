@@ -59,7 +59,7 @@ let funtionality = (k) => {
 };
 
 let timesClicked = 0;
-let eqSelect = () => {
+let eqFunction = () => {
   n1 = ''
   timesClicked++;
   if (timesClicked > 1) {
@@ -82,6 +82,11 @@ let eqSelect = () => {
 }  
 
 let keySelect = (z) => {
-    display.scrollLeft = 1000000*10000000;
-    funtionality(z);
+  display.scrollLeft = 1000000*10000000;
+  funtionality(z);
+}
+
+let eqSelect = () => {
+  display.scrollLeft = -1000000*10000000;
+  eqFunction();
 }
